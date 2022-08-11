@@ -4,7 +4,7 @@ import { ajustes } from "./suport.js";
 sessionStorage.setItem("alterar", JSON.stringify({ status: false }));
 
 const containerItensProdutos = document.querySelector(
-    ".container-item-produtos"
+    ".container-section-items"
 );
 
 window.addEventListener("DOMContentLoaded", () => {

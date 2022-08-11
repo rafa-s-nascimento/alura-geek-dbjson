@@ -44,6 +44,15 @@ const requisicaoGetEspecific = (id) => {
     return data;
 };
 
+//get Filter
+const requisicaoGetFilter = (word) => {
+    return fetch(`http://localhost:3000/produtos?q=${word}`).then(
+        (response) => {
+            return response.json();
+        }
+    );
+};
+
 // Put
 const requisicaoPut = (categoria, img, nome, descricao, preco, id) => {
     return fetch(`http://localhost:3000/produtos/${id}`, {
@@ -72,4 +81,5 @@ export const requisicoes = {
     requisicaoDelete,
     requisicaoGetEspecific,
     requisicaoPut,
+    requisicaoGetFilter,
 };

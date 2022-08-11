@@ -33,7 +33,7 @@ main .container {
 }
 
 /* exibir */
-.container-item-produtos {
+.container-section-items {
     display: flex;
     gap: 1rem;
     overflow: hidden;

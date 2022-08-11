@@ -36,8 +36,9 @@
                                 type="text"
                                 maxlength="35"
                                 placeholder="O que deseja encontrar?"
+                                data-filtro
                             />
-                            <button>
+                            <button data-btn>
                                 <i class="fa-solid fa-magnifying-glass"></i>
                             </button>
                         </div>
@@ -76,7 +77,7 @@
                             type="text"
                             name="nome"
                             id="nome-produto"
-                            maxlength="50"
+                            maxlength="20"
                             class="input"
                             required
                         />
@@ -97,6 +98,7 @@
                         id="descricao-produto"
                         name="descricao"
                         placeholder="Descrição do produto"
+                        maxlength="150"
                         class="input"
                         required
                     ></textarea>

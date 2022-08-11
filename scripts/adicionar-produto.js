@@ -2,8 +2,6 @@ import { requisicoes } from "./requisicoes.js";
 
 const alterar = JSON.parse(sessionStorage.getItem("alterar")).status;
 
-console.log(alterar);
-
 const form = document.querySelector("[data-form]");
 let categoria = document.querySelector("#categoria-produto");
 let img = document.querySelector("#img-url-produto");
@@ -71,3 +69,16 @@ form.addEventListener("submit", (event) => {
             });
     }
 });
+
+preco.addEventListener("keydown", function (e) {
+    console.log(e.key);
+    if (!checarInputPreco(e.key) && e.key !== "Backspace") {
+        e.preventDefault();
+    }
+});
+
+function checarInputPreco(num) {
+    let pattern = /\d+/;
+
+    return pattern.test(num);
+}

@@ -21,7 +21,8 @@ form.addEventListener("submit", (e) => {
             if (response.length > 0) {
                 window.location.href = "./administrar-produtos.html";
             } else {
-                console.log("Usuário ou senha invalidos");
+                login.style.borderColor = "red";
+                password.style.borderColor = "red";
             }
         });
 });
