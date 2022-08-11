@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./css/comum.css" />
+        <link rel="stylesheet" href="./css/produto.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+            rel="stylesheet"
+        />
+        <script
+            src="https://kit.fontawesome.com/162b81ecbe.js"
+            crossorigin="anonymous"
+        ></script>
+        <title>Alura Geek - Produto</title>
+    </head>
+    <body>
+        <header>
+            <div class="topo">
+                <div class="container">
+                    <a href="index.html">
+                        <img src="./img/Logo.png" alt="" class="logo" />
+                    </a>
+                    <div class="container-input">
+                        <button class="login-btn btn">Login</button>
+                        <div>
+                            <input
+                                type="text"
+                                maxlength="35"
+                                placeholder="O que deseja encontrar?"
+                            />
+                            <button>
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main>
+            <div class="container">
+                <div class="container-item-produtos"></div>
+                <div class="container-produtos-similares">
+                    <h3 class="titulo-produtos-similares titulo">
+                        produtos similares
+                    </h3>
+                    <div class="container-items"></div>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <div class="info-contato">
+                <div class="container">
+                    <div class="container-info-list">
+                        <img src="./img/Logo.png" alt="" />
+                        <ul>
+                            <li><a href="#">Quem somos nós</a></li>
+                            <li><a href="#">Politica de privacidade</a></li>
+                            <li><a href="#">Programa de fidelidade</a></li>
+                            <li><a href="#">Nossas lojas</a></li>
+                            <li><a href="#">Quero ser franqueado</a></li>
+                            <li><a href="#">Anuncie aqui</a></li>
+                        </ul>
+                    </div>
+                    <div class="container-info-form">
+                        <p class="bold titulo">fale conosco</p>
+                        <form action="#">
+                            <div class="single-input">
+                                <input
+                                    type="text"
+                                    id="name"
+                                    maxlength="50"
+                                    required
+                                />
+                                <label for="name">Nome</label>
+                            </div>
+
+                            <textarea
+                                id="message"
+                                placeholder="Escreva sua mensagem"
+                                maxlength="200"
+                            ></textarea>
+
+                            <button class="btn" type="submit">
+                                Enviar Mensagem
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="rodape">
+                <p>
+                    Desenvolvido por Rafael Nascimento
+                    <span id="data">0000</span>
+                </p>
+                <div>
+                    <a
+                        href="https://github.com/Rafa-S-Nascimento"
+                        target="_blank"
+                    >
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                    <a
+                        href="https://www.linkedin.com/in/rafael-s-nascimento/"
+                        target="_blank"
+                    >
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
+                </div>
+            </div>
+        </footer>
+
+        <script type="module" src="./scripts/detalhe-produto.js"></script>
+    </body>
+</html>

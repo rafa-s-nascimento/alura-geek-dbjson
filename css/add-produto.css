@@ -1,0 +1,112 @@
+/* topo */
+.menuADM-btn {
+    width: 10rem;
+    border-color: var(--blue-color);
+    color: var(--blue-color);
+    background-color: var(--white-color);
+}
+/* end topo */
+
+/* main */
+main .container {
+    display: flex;
+    justify-content: center;
+    padding: 1.5rem 0;
+}
+.form {
+    width: 100%;
+    max-width: 600px;
+}
+.form h3 {
+    color: rgba(0, 0, 0, 0.7);
+    margin-bottom: 1rem;
+}
+.form div.single-input2 {
+    width: 100%;
+    position: relative;
+    height: 56px;
+    display: flex;
+    align-items: flex-end;
+    background-color: var(--white-color);
+    margin-bottom: 1rem;
+}
+.single-input2 label {
+    position: absolute;
+    left: 10px;
+    bottom: 17px;
+    color: rgba(0, 0, 0, 0.3);
+    margin-bottom: 0;
+    transition: all 150ms;
+}
+.single-input2 input {
+    width: 100%;
+    height: 80%;
+    outline: none;
+    border: none;
+    padding: 0 10px;
+    font-size: 1.3rem;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+    color: rgba(0, 0, 0, 0.7);
+}
+.form textarea {
+    width: 100%;
+    height: 85px;
+    padding: 14px 10px;
+    outline: none;
+    border: none;
+    resize: none;
+    font-size: 1.1rem;
+    letter-spacing: 0.1px;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+    margin-bottom: 1rem;
+}
+.container-info-form form textarea::placeholder {
+    color: rgba(0, 0, 0, 0.5);
+}
+.single-input2 input:focus,
+.form textarea:focus {
+    border-color: var(--blue-color);
+}
+.form textarea::placeholder {
+    color: rgba(0, 0, 0, 0.5);
+    font-family: var(--font-family);
+}
+.single-input2 input:focus ~ label,
+.single-input2 input:valid ~ label {
+    transform: translateY(-19px);
+    font-size: 0.8rem;
+    color: rgba(0, 0, 0, 0.3);
+}
+.add-produto-btn {
+    width: 100%;
+    height: 50px;
+    padding: 0.75rem 1.5rem;
+    color: var(--white-color);
+    background-color: var(--blue-color);
+    border: 1px solid var(--blue-color);
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+/* end main */
+
+@media screen and (min-width: 536px) {
+    /* main exibição de itens */
+    main .container {
+        padding: 2.5rem 0;
+    }
+}
+
+@media screen and (min-width: 1006px) {
+    header {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        background-color: var(--gray-color);
+    }
+
+    /* main */
+    main .container {
+        padding: 4rem 0;
+    }
+    /* end main */
+}

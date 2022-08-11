@@ -1,0 +1,73 @@
+.login-btn {
+    display: none;
+}
+
+/* main */
+main .container {
+    display: flex;
+    justify-content: center;
+    padding: 10rem 0;
+}
+
+.login-container {
+    width: 275px;
+}
+.login-container form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#p {
+    color: rgba(0, 0, 0, 0.8);
+    font-size: 1rem;
+}
+.login-container form input {
+    width: 100%;
+    height: 56px;
+    outline: none;
+    border: none;
+    padding: 0 10px;
+    font-size: 1.1rem;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+}
+.login-container form input::placeholder {
+    color: rgba(0, 0, 0, 0.5);
+}
+.login-container form input:focus {
+    box-shadow: var(--shadow);
+    border-color: var(--blue-color);
+}
+.login-container form * {
+    margin-bottom: 1rem;
+}
+.entrar-btn {
+    padding: 0.75rem 1.5rem;
+    color: var(--white-color);
+    background-color: var(--blue-color);
+    border: 1px solid var(--blue-color);
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+/* end main */
+
+@media screen and (min-width: 1006px) {
+    header {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        background-color: var(--gray-color);
+    }
+
+    /* main */
+    .login-container {
+        width: 423px;
+    }
+    .login-container form * {
+        margin-bottom: 2rem;
+    }
+    .entrar-btn {
+        width: 100%;
+        height: 56px;
+    }
+    /* end main */
+}
