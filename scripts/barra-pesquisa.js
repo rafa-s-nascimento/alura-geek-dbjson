@@ -13,44 +13,49 @@ pesquisarBtn.addEventListener("click", function () {
         let location = window.location;
 
         requisicoes.requisicaoGetFilter(valorProcurado).then((data) => {
-            if (location.pathname.includes("index")) {
-                const categorias = data.reduce(function (ac, item) {
-                    if (!ac.includes(item.categoria)) {
-                        ac.push(item.categoria);
-                    }
-                    return ac;
-                }, []);
+            if (data.length > 0) {
+                if (location.pathname.includes("index")) {
+                    const categorias = data.reduce(function (ac, item) {
+                        if (!ac.includes(item.categoria)) {
+                            ac.push(item.categoria);
+                        }
+                        return ac;
+                    }, []);
 
-                containerSection.innerHTML = categorias
-                    .map((categoria) => {
-                        let innerHTML = `
-            <section>
-                <div class="titulo-section-items">
-                    <h3 id="${categoria}" class="titulo">${categoria}</h3>
-                    <a href="produtos.html">
-                        Ver tudo
-                        <i class="fa-solid fa-arrow-right-long"></i>
-                    </a>
-                </div>
-                <div class="container-item">
-                    ${ajustes.gerarItens(
-                        ajustes.filtraItensPorCategoria(data, categoria)
-                    )}
-                </div>        
-            </section>`;
+                    containerSection.innerHTML = categorias
+                        .map((categoria) => {
+                            let innerHTML = `
+                                <section>
+                                    <div class="titulo-section-items">
+                                        <h3 id="${categoria}" class="titulo">${categoria}</h3>
+                                        <a href="produtos.html">
+                                            Ver tudo
+                                            <i class="fa-solid fa-arrow-right-long"></i>
+                                        </a>
+                                    </div>
+                                    <div class="container-item">
+                                        ${ajustes.gerarItens(
+                                            ajustes.filtraItensPorCategoria(
+                                                data,
+                                                categoria
+                                            )
+                                        )}
+                                    </div>        
+                                </section>`;
 
-                        return innerHTML;
-                    })
-                    .join("");
-            } else {
-                containerSection.innerHTML = ajustes.gerarItens(data);
+                            return innerHTML;
+                        })
+                        .join("");
+                } else {
+                    containerSection.innerHTML = ajustes.gerarItens(data);
 
-                const itens = document.querySelectorAll(".item");
+                    const itens = document.querySelectorAll(".item");
 
-                itens.forEach((item) => {
-                    item.appendChild(ajustes.criaButtonExcluir());
-                    item.appendChild(ajustes.criaButtonEditar());
-                });
+                    itens.forEach((item) => {
+                        item.appendChild(ajustes.criaButtonExcluir());
+                        item.appendChild(ajustes.criaButtonEditar());
+                    });
+                }
             }
         });
     }
